@@ -59,21 +59,31 @@ php artisan key:generate
 
 ### 5. Create Database
 
-Open XAMPP and start MySQL. Then create the database:
+**Option 1 - Using HeidiSQL:**
+1. Open HeidiSQL
+2. Connect to MySQL (username: root, password: 20020224Ha)
+3. Right-click → Create New → Database
+4. Name: `aahaas_ecommerce`
+5. Click OK
 
-```bash
-mysql -u root -p
+**Option 2 - Using MySQL Workbench:**
+1. Open MySQL Workbench
+2. Connect to local MySQL server
+3. Run this query:
+```sql
 CREATE DATABASE aahaas_ecommerce;
-exit;
 ```
 
-Or create it via phpMyAdmin at `http://localhost/phpmyadmin`
+**Option 3 - Using phpMyAdmin:**
+Go to `http://localhost/phpmyadmin` and create database `aahaas_ecommerce`
 
 ### 6. Run Migrations
 
 ```bash
-php artisan migrate
+php artisan migrate:fresh
 ```
+
+This will create all necessary tables in the database.
 
 ### 7. Seed the Database
 
@@ -83,7 +93,7 @@ php artisan db:seed
 
 This will create 5 sample products in the database.
 
-## Running the Server
+## Running the Backend Server
 
 Start the Laravel development server:
 
@@ -92,6 +102,26 @@ php artisan serve
 ```
 
 The API will be available at `http://localhost:8000`
+
+**Keep this terminal open** - the server needs to stay running!
+
+## Quick Start Commands (Summary)
+
+After setting up, use these commands to run the backend:
+
+```bash
+# Navigate to backend folder
+cd product-api-laravel
+
+# Run migrations and seed (first time only)
+php artisan migrate:fresh
+php artisan db:seed
+
+# Start the server
+php artisan serve
+```
+
+Access the API at: `http://localhost:8000/api/products`
 
 ## API Endpoints
 
