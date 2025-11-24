@@ -208,4 +208,4 @@ CORS is enabled by default in Laravel 11. If you still face issues, check the `b
 
 ## License
 
-This project is open-source and available for educational purposes.
+This project is open-source and available for internship task complete purposes.
