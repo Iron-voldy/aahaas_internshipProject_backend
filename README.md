@@ -22,8 +22,8 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Iron-voldy/aahaas_internship_task.git
-cd aahaas_internship_task/product-api-laravel
+git clone https://github.com/Iron-voldy/aahaas_internshipProject_backend.git
+cd aahaas_internshipProject_backend
 ```
 
 ### 2. Install Dependencies
@@ -111,7 +111,7 @@ After setting up, use these commands to run the backend:
 
 ```bash
 # Navigate to backend folder
-cd product-api-laravel
+cd aahaas_internshipProject_backend
 
 # Run migrations and seed (first time only)
 php artisan migrate:fresh
@@ -154,7 +154,7 @@ Response:
 ## Project Structure
 
 ```
-product-api-laravel/
+aahaas_internshipProject_backend/
 ├── app/
 │   ├── Http/Controllers/Api/
 │   │   └── ProductController.php
